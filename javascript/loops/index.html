@@ -1,0 +1,333 @@
+<!-- Hey! Good job checking out the HTML for the page! The structure should be pretty simple to follow. The body section consists
+     of a single <header> section followed by a <section> for each exercise. Inside each <section> is a <div> with class
+     exercise-header. This contains the descriptions of each exercise, and you mostly won't have to pay attention to HTML in
+     those. Each <section> also contains a <div> with class exercise-body. These are the parts of the HTML that your code will
+     interact with! So pay attention to them :) I've marked them all with comments -->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>JavaScript Exercises</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+    </head>
+    <body>
+        <div id="page">
+
+            <!-- Page header -->
+            <header class="page-header">
+                <h1 class="page-title">Fun With JavaScript Loops</h1>
+                <p class="page-description">
+                    Here's a bunch of exercises which can be solved using JavaScript loops. The two types of loops you'll use are
+                    <code>for</code> loops and <code>while</code> loops. A <em>loop</em> is a type of <em>control flow</em>, like
+                    an <code>if</code> statement. <em>Control flow</em> instructions are special, because they give the computer
+                    more information about the order in which normal instructions (like variable assignment or function calls)
+                    should be executed. In particular, loops tell the computer to repeatedly execute some set of instructions
+                    until a condition is met. This is true of both kinds of loops and, in fact, any problem that could be solved
+                    with a <code>for</code> loop could be solved with a <code>while</code> loop instead (though it might not be
+                    obvious how).
+                </p>
+                <p class="page-description">
+                    English has looping structures in it, too, even though you might not think of them that way. Think of a recipe
+                    for cake that instructs you to "stir the batter <em>until it is smooth.</em>" This is a lot like a while
+                    loop:
+
+                    <!-- "pre" stands for "preformatted," often used to embed code in pages. This means that any line breaks and
+                         end up in the resulting HTML for the page! -->
+                    <pre>
+
+    while (batter is not smooth) {
+        stir;
+    }
+                    </pre>
+                </p>
+                <p class="page-description">
+                    Another example could be "pick up all that stuff off the floor" interpreted as a <code>for</code> loop.
+                    <pre>
+
+    var count = number of things on the floor;
+    for (var i = 1; i <= count; i++) {
+        pick up thing #i
+    }
+                    </pre>
+                </p>
+            </header>
+
+            <!-- Exercise 0 block -->
+            <section class="exercise" id="exercise-0">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">Exercise 0: Getting Started</h3>
+                    <p class="exercise-description">
+                        All of the exercises in this document (except this one) have a corresponding JavaScript file where you will
+                        write a solution. The solutions will all take input from, and write output back to this file (<code>index.html</code>).
+                        This set of exercises also comes with solutions in the <code>solutions</code> folder. To see how a certain exercise
+                        is supposed to work, you can replace the <code>src</code> in the corresponding <code>script</code> tag at the end of
+                        the <code>body</code> of this page to the one from <code>solutions</code>
+                    </p>
+                    <p class="exercise-description">
+                        For example, to see the solution to Exercise 1, you could replace
+                        <pre>
+
+    &lt;script type="text/javascript" src="exercise1.js"&gt;&lt;/script&gt;
+                        </pre>
+                    </p>
+                    <p class="exercise-description">
+                        with
+                        <pre>
+
+    &lt;script type="text/javascript" src="solutions/exercise1.js"&gt;&lt;/script&gt;
+                        </pre>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Exercise 1 block -->
+            <section class="exercise" id="exercise-1">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">Exercise 1: Making Divs</h3>
+                    <p class="exercise-description">
+                        In this exercise, you will replace repetitive code with a loop. Check out <code>exercise1.js</code>.
+                        Four times, a div element is created using <code>document.createElement</code>. Its <code>innerHTML</code>
+                        attribute is updated to contain a statement indicating its order, and it is appended as a child to
+                        the <code>"exercise-1-body"</code> element. Replace this repetitive code with a <code>for</code> loop, and then change
+                        the number of <code>div</code> elements created to 10.
+                    </p>
+                </div>
+
+                <!-- ** EXERCISE 1 BODY ** -->
+                <div class="exercise-body" id="exercise-1-body"></div>
+                <!-- ** END EXERCISE 1 BODY ** -->
+
+            </section>
+
+            <!-- Exercise 2 block -->
+            <section class="exercise" id="exercise-2">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">Exercise 2: Variations</h3>
+                    <p class="exercise-description">
+                        In this exercise, you will create a variety of outputs based on a single input number N. In the input box below,
+                        enter a positive number like <code>5</code>. Click on the <i>N Squared</i> button. Below the answer should appear --
+                        your input number times itself. Check out the code in <code>exercise2.js</code> The function <code>squareN</code>
+                        is called when the <i>N Squared</i> button is clicked. You should fill in the other five functions so that they <!DOCTYPE html>
+                        the following
+                    </p>
+                    <p class="exercise-description">
+                        <u>Sum 1 to N</u>:<br>
+                        Answer should be the sum of all the numbers from 1 to N. For example, for 5 it should
+                        be 15, because 15 is 1 + 2 + 3 + 4 + 5. For 100 it should be 5050, because 1 + 2 + 3 + ... + 99 + 100 = 5050. There
+                        are ways to solve this without using a loop, but your solution should use a loop.
+                    </p>
+                    <p class="exercise-description">
+                        <u>Odd Sum 1 to N</u>:<br>
+                        Similar to the first problem, but this time the answer should be the sum of all the <em>odd</em>
+                        numbers from 1 to N. For example, for 5 it should be 9, because 1 + 3 + 5 = 9. For 20 it should be 100, because 1 + 3 + 5 + ...
+                        + 15 + 17 + 19 = 100. There are ways to solve this without using a loop, but your solution should use a loop.
+                    </p>
+                    <p class="exercise-description">
+                        <u>Stars!</u>:<br>
+                        Answer should be a string of N asterisk characters (*). For example, for 5 it should be
+                        *****. For 15 it should be ***************.
+                    </p>
+                    <p class="exercise-description">
+                        <u>Super Stars!</u>:<br>
+                        Answer should be N strings of N stars, surrounded by parentheses. For example, for 2 it should
+                        be (**)(**). For 5 it should be (*****)(*****)(*****)(*****)(*****).
+                    </p>
+                    <p class="exercise-description">
+                        <u>N'th Fibonacci</u>:<br>
+                        The Fibonacci numbers are a famous mathematical sequence named for the 11th century Italian mathematician
+                        Leonardo of Pisa (also called <i>Fibonacci</i>, a nickname meaning essentially "Son of Bonacci"). The number
+                        sequence is defined as follows: The first two numbers in the sequence are <strong>1 1</strong>. Every successive
+                        number in the sequence can be found by adding up the two that come before it. So to find the 3rd Fibonacci
+                        number, add the 2nd and the 1st to get <strong>2</strong>. Continuing this pattern produces<br><br>
+                        <strong>1 1 2 3 5 8 13 21 34 55 ...</strong><br><br>
+                        Notice that every number equals the sum of the two before it. The answer in this exercise should be the N'th
+                        Fibonacci number. For example, for 3 it should be 2 because 2 is the 3rd Fibonacci number. For 7 it should be
+                        13, because 13 is the 7th Fibonacci number. There are ways to solve this without using a loop, but your solution
+                        should use a loop.
+                    </p>
+                </div>
+
+                <!-- ** EXERCISE 2 BODY ** -->
+                <div class="exercise-body" id="exercise-2-body">
+                    <input id="N" placeholder="N"></input>
+                    <button id="square-button">N Squared</button>
+                    <button id="sum-up-to-button">Sum 1 to N</button>
+                    <button id="sum-odd-to-button">Odd Sum 1 to N</button>
+                    <button id="show-stars-button">Stars!</button>
+                    <button id="super-stars-button">Super Stars!</button>
+                    <button id="fibonacci-button">N'th Fibonacci</button>
+                    <br><br>
+                    The answer is: <span id="answer"></span>
+                </div>
+                <!-- ** END EXERCISE 2 BODY ** -->
+
+            </section>
+
+            <!-- Exercise 3 block -->
+            <section class="exercise" id="exercise-3">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">Exercise 3: Number Guessing Game</h3>
+                    <p class="exercise-description">
+                        In this exercise, you will create a number guessing game. The user should enter two numbers
+                        into the input boxes, and click the <i>Play Number Guess</i> button to play the game. The game should pick a random
+                        number between the two as the "correct" number. Once the game starts, the user should be prompted
+                        to enter a number. If the number is correct, they should get an alert "You win!". Otherwise, if the number
+                        is too high they should be prompted "Too high! Guess again". If the number is too low they should be
+                        prompted "Too low! Guess again". They should continue to receive prompts until they guess correctly.
+                    </p>
+                    <p class="exercise-description">
+                        Check out <code>exerciseTwo.js</code>. Right now there is just one function defined, called <code>playNumberGuess</code>.
+                        The next line instructs the computer to execute the body of that function when the HTML element with the id
+                        <code>play-button</code> is clicked. In the HTML for this file, you can see that element is the button labeled
+                        <i>Play Number Guess</i>. You should fill in the body of <code>playNumberGuess</code> (the body of a function is
+                        the part between the <code>{</code> and <code>}</code>) so that it
+                        <ol>
+                            <li>Picks a random integer between <code>low</code> and <code>high</code>.</li>
+                            <li>Repeatedly prompts the user for guesses, informing them in the next prompt whether their previous guess was
+                                too high or too low.</li>
+                            <li>When the user guesses correctly, display one last alert saying "You win!"</li>
+                        </ol>
+                    </p>
+                </div>
+
+                <!-- ** EXERCISE 3 BODY ** -->
+                <div class="exercise-body" id="exercise-3-body">
+                    <input id="range-low" placeholder="Lowest Number"></input>
+                    <input id="range-high" placeholder="Highest Number"></input>
+                    <button id="play-button">Play Number Guess</button>
+                </div>
+                <!-- ** END EXERCISE 3ß BODY ** -->
+
+            </section>
+
+            <section class="exercise" id="exercise-4">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">Exercise 4: Markov Part I</h3>
+                    <p class="exercise-description">
+                        This is a two-part exercise in which you will write a Markov Text generator. A Markov Text generator takes in a document
+                        (a sequence of words, in this case a paragraph from the Wikipedia article on George Washington) and then generates a new
+                        document with similar statistical properties. This algorithm is very similar to the one used in modern devices to predict
+                        the next word which will be typed based on the one that came before it. The results of basic Markov Text generation are
+                        often humorous and word-salad like, in that every pair of words makes sense together, but as a whole the phrases meander
+                        nonsensically.
+                    </p>
+                    <p class="exercise-description">
+                        The algorithm is named for Andrey Markov, a Russian mathematician from the 1800's who produced a great deal of work around
+                        processes like Markov Text generation. His research is widely used in fields like machine learning, behavior prediction,
+                        and computational linguistics.
+                    </p>
+                    <p class="exercise-description">
+                        To get started, we'll first need to know which pairs of words are possible. The idea of Markov Text generation is to always
+                        pick a next word that completes a pair we've already seen. For example, if the input document was "I hate that I like you,"
+                        we know that the word "I" can be followed by either "hate" or "like", but not "you". In this exercise, read the contents of the input box
+                        with id <code>markov-1-input</code> and then, when the <i>Run</i> button is pressed, the span tag with id <code>markov-1-answer</code>
+                        should be populated with a comma-separated list of all the words in the textarea that could follow the input word.
+                    </p>
+                    <p class="exercise-description">
+                        For example, in the input document below, if the input word was "the", the answer should be "provincial, colonial, first, French, Second, Continental, American, British"
+                    </p>
+                </div>
+
+                <!-- ** EXERCISE 4 BODY ** -->
+                <div class="exercise-body" id="exercise-4-body">
+                    <textarea class="markov-textarea" id="markov-1-textarea" placeholder="Enter some text...">
+He was born into the provincial gentry of Colonial Virginia to a family of wealthy planters who owned tobacco plantations and slaves, which he inherited. In his youth, he became a senior officer in the colonial militia during the first stages of the French and Indian War. In 1775, the Second Continental Congress commissioned him as commander-in-chief of the Continental Army in the American Revolution. In that command, Washington forced the British out of Boston in 1776 but was defeated and nearly captured later that year when he lost New York City.
+                    </textarea>
+                    <input id="markov-1-input" placeholder="Target Word"></input>
+                    <button id="markov-1-button">Run</button><br><br>
+                    Words that follow <span id="markov-1-target"></span> are: <span id="markov-1-answer"></span>
+                </div>
+                <!-- ** END EXERCISE 4 BODY ** -->
+
+            </section>
+
+            <section class="exercise" id="exercise-5">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">Exercise 5: Markov Part II</h3>
+                    <p class="exercise-description">
+                        So now that you know how to find the possible subsequents for a single word, you'll need to find them for every word in the input!
+                        Markov Text generation works by picking a starting word, and then randomly choosing the word to follow it from its possible subsequents.
+                        Then doing the same with that word, and so on, until enough words of Markov Text have been generated.
+                    </p>
+                    <p class="exercise-description">
+                        To do this, you'll first need an association between words and all the words that follow them. For example, if the input document was
+                        "I know I want to go to the store, but I don't know what I want to buy," the association would be
+                        <pre>
+
+    I      -> know, want, don't, want
+    know   -> I, what
+    want   -> to, to
+    to     -> go, the
+    go     -> to
+    the    -> store
+    store  -> but
+    but    -> I
+    don't  -> know
+    what   -> I
+    should -> buy
+                        </pre>
+                    </p>
+                    <p class="exercise-description">
+                        Notice that following "I" the word "want" is represented twice. This is because "I want" shows up twice in the original document, so
+                        "want" is twice as likely to follow "I" as the other two in the list. Starting with "I" and picking randomly from the associations,
+                        we could for example generate "I don't know I want to go"
+                    </p>
+                    <p class="exercise-description">
+                        In JavaScript, we store associations using objects. For example, let's say the first word we see is "I". To start off the association,
+                        we'd write
+                        <pre>
+
+    var association = {};
+    association['I'] = [];
+                        </pre>
+                    </p>
+                    <p class="exercise-description">
+                        This creates an object called <code>association</code>, and it starts off empty. Then we associate "I" with an empty list, because we
+                        don't yet know what could follow "I."
+                        Then if the next word is "want", we need to add that to the association. I do this using the <code>push</code> method of a JavaScript
+                        array. At the end of this line's execution the value of <code>association</code> is <code>{ 'I': ['want'] }</code>
+                        <pre>
+
+    association['I'].push('want')
+                        </pre>
+                    </p>
+                    <p class="exercise-description">
+                        Once the association is completed for every word, the Markov Text can be generated as discussed before! To complete this exercise, you should accept
+                        a starting word as well as a number, and then when the Run button is clicked, the <code>div</code> tag with id <code>markov-2-answer</code>
+                        should be populated with that many words of Markov text generated from the input. As input, I've provided for you a document from three
+                        sources: the lyrics to Jingle Bells, a snipped from the Wikipedia article on cats, and the first eight verses of Genesis from
+                        the King James Bible.
+                        When I ran it with this input, one of the phrases generated was "Dashing through the earth was good: and darkness he called the way;
+                        oh! what fun it is a small, typically furry, carnivorous mammal," among other ridiculous things.
+                    </p>
+                </div>
+
+                <!-- ** EXERCISE 5 BODY ** -->
+                <div class="exercise-body" id="exercise-5-body">
+                    <textarea class="markov-textarea" id="markov-2-textarea" placeholder="Enter some text...">
+Dashing through the snow in a one-horse open sleigh. O'er the fields we go, laughing all the way. Bells on bob tail ring, making spirits bright. What fun it is to ride and sing a sleighing song tonight! Jingle bells, jingle bells, jingle all the way; oh! what fun it is to ride in a one-horse open sleigh. Jingle bells, jingle bells, jingle all the way; oh! what fun it is to ride in a one-horse open sleigh.
+
+The domestic cat is a small, typically furry, carnivorous mammal. They are often called house cats when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines. Cats are often valued by humans for companionship and for their ability to hunt vermin. There are more than 70 cat breeds, though different associations proclaim different numbers according to their standards.
+
+In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.</textarea>
+                    <input id="markov-2-word-input" placeholder="Starting Word"></input>
+                    <input id="markov-2-count-input" placeholder="Words to Generate"></input>
+                    <button id="markov-2-button">Run</button><br><br>
+                    <div id="markov-2-answer"></div>
+                </div>
+                <!-- ** END EXERCISE 5 BODY ** -->
+
+            </section>
+
+        </div>
+
+        <!-- scripts attached at the bottom so that the page is guaranteed to be loaded! -->
+        <script type="text/javascript" src="exercise1.js"></script>
+        <script type="text/javascript" src="exercise2.js"></script>
+        <script type="text/javascript" src="exercise3.js"></script>
+        <script type="text/javascript" src="exercise4.js"></script>
+        <script type="text/javascript" src="exercise5.js"></script>
+    </body>
+</html>
