@@ -34,7 +34,10 @@ function stars() {
 
 function superStars() {
   var N = parseInt(document.getElementById("N").value);
-
+  var result = " ";
+  for (var i = 1; i <= N; i ++) {
+    result += "(*)";
+  }
   document.getElementById("answer").innerHTML = result;
 }
 
