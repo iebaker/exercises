@@ -17,8 +17,9 @@ divFour.innerHTML = "This is div 4";
 exerciseOneBody.appendChild(divFour);*/
 
 var i
-var div = document.createElement("div");
+
 for (var i = 1; i < 11; i ++) {
-  div.innerHTML += "<div>This is div" + i + "</div";
+  var div = document.createElement("div");
+  div.innerHTML += "This is div" + i;
   exerciseOneBody.appendChild(div);
 }
