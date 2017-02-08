@@ -36,7 +36,11 @@ function superStars() {
   var N = parseInt(document.getElementById("N").value);
   var result = " ";
   for (var i = 1; i <= N; i ++) {
-    result += "(*)";
+    result += "(";
+    for (var j = 1; j <= N; j ++) {
+      result +=  "*";
+    }
+    result += ")";
   }
   document.getElementById("answer").innerHTML = result;
 }
@@ -44,7 +48,11 @@ function superStars() {
 
 function nthFibonacci() {
   var N = parseInt(document.getElementById("N").value);
-
+  var result = " ";
+  var i = 1;
+  while (i <= N) {
+    result
+  }
   document.getElementById("answer").innerHTML = result;
 }
 
