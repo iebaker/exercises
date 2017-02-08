@@ -6,19 +6,18 @@ function playNumberGuess() {
     var low = parseInt(document.getElementById("range-low").value);
     var high = parseInt(document.getElementById("range-high").value);
     var answer = makeRandomNumber(low,high);
-    var guess = prompt("Guess a number between the two you chose.");
+    var guess = parseInt(prompt("Guess a number between the two you chose."));
     var i = 0;
     while (guess !== answer) {
        if (guess > answer) {
         alert("Your guess is too high");
-        guess = prompt("Guess again.");
+        guess = parseInt(prompt("Guess again."));
       } else if (guess < answer) {
-        alert("Your guess is too low.")
-        guess = prompt("Guess again.");
-      }  else if (guess === answer) {
-          alert("You win!")
+        alert("Your guess is too low.");
+        guess = parseInt(prompt("Guess again."));
       }
-   }
+    }
+   alert("You win!");
 }
 
 function makeRandomNumber (low, high) {
